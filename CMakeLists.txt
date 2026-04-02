@@ -16,9 +16,13 @@ target_include_directories(nsx_harness PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/includes-api>
     $<BUILD_INTERFACE:${NSX_ROOT}/modules/nsx-core/includes-api>
     $<BUILD_INTERFACE:${NSX_ROOT}/modules/nsx-utils/includes-api>
+    $<BUILD_INTERFACE:${NSX_ROOT}/modules/nsx-perf/includes-api>
+    $<BUILD_INTERFACE:${NSX_ROOT}/modules/nsx-pmu-armv8m/includes-api>
     $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/nsx/modules/nsx-harness/includes-api>
     $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/nsx/modules/nsx-core/includes-api>
     $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/nsx/modules/nsx-utils/includes-api>
+    $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/nsx/modules/nsx-perf/includes-api>
+    $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/nsx/modules/nsx-pmu-armv8m/includes-api>
 )
 
 target_link_libraries(nsx_runtime_core INTERFACE nsx_harness)

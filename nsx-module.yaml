@@ -19,7 +19,9 @@ depends:
   required:
     - nsx-core
     - nsx-soc-hal
-  optional: []
+  optional:
+    - nsx-perf
+    - nsx-pmu-armv8m
 
 compatibility:
   boards:
