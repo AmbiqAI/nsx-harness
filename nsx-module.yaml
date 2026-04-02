@@ -9,6 +9,25 @@ support:
   ambiqsuite: true
   zephyr: false
 
+summary: Harness-side helpers for logging, smoke tests, and instrumentation-friendly app output.
+
+capabilities:
+  - logging
+  - harness
+  - debug_output
+  - smoke_test_support
+
+use_cases:
+  - app bring-up output
+  - debug logging
+  - SWO or printf-oriented smoke tests
+
+agent_keywords:
+  - logging
+  - printf
+  - swo
+  - harness
+
 build:
   cmake:
     package: nsx_harness
