@@ -1,39 +1,33 @@
 schema_version: 1
-
 module:
   name: nsx-harness
   type: backend_specific
-  version: "0.1.0"
-
+  version: 0.1.1
 support:
   ambiqsuite: true
   zephyr: false
-
-summary: Harness-side helpers for logging, smoke tests, and instrumentation-friendly app output.
-
+summary: >-
+  Harness-side helpers for logging, smoke tests, and instrumentation-friendly
+  app output.
 capabilities:
   - logging
   - harness
   - debug_output
   - smoke_test_support
-
 use_cases:
   - app bring-up output
   - debug logging
   - SWO or printf-oriented smoke tests
-
 agent_keywords:
   - logging
   - printf
   - swo
   - harness
-
 build:
   cmake:
     package: nsx_harness
     targets:
       - nsx::harness
-
 depends:
   required:
     - nsx-core
@@ -41,10 +35,9 @@ depends:
   optional:
     - nsx-perf
     - nsx-pmu-armv8m
-
 compatibility:
   boards:
-    - "*"
+    - '*'
   socs:
     - apollo3
     - apollo3p
@@ -57,5 +50,4 @@ compatibility:
   toolchains:
     - arm-none-eabi-gcc
     - armclang
-
     - atfe
