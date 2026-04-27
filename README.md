@@ -15,3 +15,14 @@ Profiling-focused applications should add:
 
 This module is CMake-first and intended to be consumed through `nsx create-app`
 or vendored module workflows.
+
+## Toolchains
+
+Built and validated under `arm-none-eabi-gcc`, `armclang`, and `clang`/ATfE.
+Toolchain-specific differences in inline assembly, attributes, and intrinsics
+are absorbed by `nsx-core/nsx_compiler.h`.
+
+## Dependencies
+
+- `nsx-core` (required) — runtime init and compiler-abstraction macros.
+- An SDK provider (`nsx-ambiqsuite-r3/r4/r5`) — for `am_util_*` print helpers.
